@@ -3,7 +3,7 @@
 This project is a demo take-home project to build a map way-point plotter. 
 
 # Development goals: 
-[ ] Render Leaflet map on page
+[x] Render Leaflet map on page
 [ ] Drop points on map
 [ ] Reset Map
 [ ] Custom code for distance between points (and total);
@@ -11,6 +11,8 @@ This project is a demo take-home project to build a map way-point plotter.
 [ ] Render waypoint list component.
 [ ] Store Points in Local Storage
 [ ] Clear Local Storage for way points
+### Nice to have:
+[ ] Replace map ties with a better set.
  
 
 ## Available Scripts
