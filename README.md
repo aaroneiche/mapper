@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# Mapper - a demonstration of map waypoint making 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a demo take-home project to build a map way-point plotter. 
+
+# Development goals: 
+[ ] Render Leaflet map on page
+[ ] Drop points on map
+[ ] Reset Map
+[ ] Custom code for distance between points (and total);
+[ ] Unit tests for distance code
+[ ] Render waypoint list component.
+[ ] Store Points in Local Storage
+[ ] Clear Local Storage for way points
+ 
 
 ## Available Scripts
 
