@@ -1,29 +1,25 @@
 import React, {Component, useState} from 'react'
 import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet'
 
-
-const MarkerLayer = () => {
+const MarkerLayer = (props) => {
     
-    const [waypoints, setWaypoints] = useState([]);
     const map = useMapEvents({
         click(e) {   
-            setWaypoints([...waypoints,[e.latlng.lat, e.latlng.lng]])
+            props.setWaypoints([...props.waypoints,[e.latlng.lat, e.latlng.lng]])
         },
         contextmenu(e) {
             console.log('Right click handler :)');
         }
     });
 
-
-    const renderedWaypoints = waypoints.map((coords) => {
-        console.log(coords);
+    const renderedWaypoints = props.waypoints.map((coords) => {
         return <Marker key={coords[0]} position={coords} />
       });
 
       return <div>{renderedWaypoints}</div>;
 }
 
-function Map() {
+function Map(props) {
 
     // return <div>I am a Map </div>
     const mapStyles = {
@@ -42,7 +38,7 @@ function Map() {
             url={tiles}
         />
         
-        <MarkerLayer/>
+        <MarkerLayer waypoints={props.waypoints} setWaypoints={props.setWaypoints} />
     </MapContainer>            
 </div>
 }
