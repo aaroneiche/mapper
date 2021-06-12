@@ -1,7 +1,7 @@
 import './App.css';
 // import Map from './components/Map.js';
 import Map from './components/MapAlt';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 function App() {
 
