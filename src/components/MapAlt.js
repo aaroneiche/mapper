@@ -20,7 +20,12 @@ function Map(props) {
             url={tiles}
         />
         
-        <MarkerLayer waypoints={props.waypoints} setWaypoints={props.setWaypoints} />
+        <MarkerLayer 
+            waypoints={props.waypoints} 
+            setWaypoints={props.setWaypoints} 
+            activePath={props.activePath} 
+            setActivePath={props.setActivePath} 
+        />
         <PathLayer waypoints={props.waypoints}/>
     </MapContainer>            
 </div>

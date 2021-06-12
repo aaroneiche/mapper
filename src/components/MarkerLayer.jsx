@@ -4,11 +4,24 @@ const MarkerLayer = (props) => {
     
     const map = useMapEvents({
         click(e) {   
-            props.setWaypoints([...props.waypoints,[e.latlng.lat, e.latlng.lng]])
+            if(props.activePath) {
+                props.setWaypoints([...props.waypoints,[e.latlng.lat, e.latlng.lng]])
+            }else{
+                props.setActivePath(true);
+            }
+            
         },
         contextmenu(e) {
-            console.log('Right click handler :)');
+            if(props.activePath) {
+                props.setActivePath(false);
+            }
+        },
+        mousemove(e) {
+            if(props.activePath) {
+                console.log(`${e.originalEvent.clientX},${e.originalEvent.clientX}`);
+            }
         }
+
     });
 
     const renderedWaypoints = props.waypoints.map((coords) => {
