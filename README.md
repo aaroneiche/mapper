@@ -3,17 +3,19 @@
 This project is a demo take-home project to build a map way-point plotter. 
 
 # Development goals: 
-[x] Render Leaflet map on page
-[ ] Drop points on map
-[ ] Reset Map
-[ ] Custom code for distance between points (and total);
-[ ] Unit tests for distance code
-[ ] Render waypoint list component.
-[ ] Store Points in Local Storage
-[ ] Clear Local Storage for way points
+- [x] Render Leaflet map on page
+- [ ] Left Click Drop Points on map
+- [ ] Draw polyline between all points
+- [ ] Right Click End Polyine
+- [ ] Reset Map
+- [ ] Custom code for distance between points (and total);
+- [ ] Unit tests for distance code
+- [ ] Render waypoint list component.
+- [ ] Store Points in Local Storage
+- [ ] Clear Local Storage for way points
 ### Nice to have:
-[ ] Replace map ties with a better set.
-[ ] Replace Marker with something prettier. 
+- [ ] Replace map ties with a better set.
+- [ ] Replace Marker with something prettier. 
 
 ## Available Scripts
 
