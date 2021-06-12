@@ -6,14 +6,18 @@ const MarkerLayer = () => {
     
     const [waypoints, setWaypoints] = useState([]);
     const map = useMapEvents({
-        click(e) {
+        click(e) {   
             setWaypoints([...waypoints,[e.latlng.lat, e.latlng.lng]])
+        },
+        contextmenu(e) {
+            console.log('Right click handler :)');
         }
     });
 
 
-    const renderedWaypoints = waypoints.map(coords => {
-        return <Marker key="{coords.toString()}" position={coords} />
+    const renderedWaypoints = waypoints.map((coords) => {
+        console.log(coords);
+        return <Marker key={coords[0]} position={coords} />
       });
 
       return <div>{renderedWaypoints}</div>;
