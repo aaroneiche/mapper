@@ -5,7 +5,7 @@ import {useState} from 'react';
 
 function App() {
 
-  const [waypoints,setWaypoints] = useState([[39.8528, -75.1638]]);
+  const [waypoints,setWaypoints] = useState([]); //[39.8528, -75.1638]
   const [activePath,setActivePath] = useState(false);
 
   const clearPoints = () => {
