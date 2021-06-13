@@ -18,7 +18,7 @@ const MarkerLayer = (props) => {
         },
         mousemove(e) {
             if(props.activePath) {
-                console.log(`${e.originalEvent.clientX},${e.originalEvent.clientX}`);
+                // console.log(`${e.originalEvent.clientX},${e.originalEvent.clientX}`);
             }
         }
 

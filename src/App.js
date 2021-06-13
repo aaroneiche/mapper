@@ -1,6 +1,5 @@
 import './App.css';
-// import Map from './components/Map.js';
-import Map from './components/MapAlt';
+import Map from './components/Map';
 import {useState} from 'react';
 
 function App() {
