@@ -15,13 +15,7 @@ const MarkerLayer = (props) => {
             if(props.activePath) {
                 props.setActivePath(false);
             }
-        },
-        mousemove(e) {
-            if(props.activePath) {
-                // console.log(`${e.originalEvent.clientX},${e.originalEvent.clientX}`);
-            }
         }
-
     });
 
     const renderedWaypoints = props.waypoints.map((coords) => {

@@ -27,7 +27,7 @@ function Map(props) {
             activePath={props.activePath} 
             setActivePath={props.setActivePath} 
         />
-        <PathLayer waypoints={props.waypoints} />
+        <PathLayer waypoints={props.waypoints} activePath={props.activePath}/>
         <Annotations waypoints={props.waypoints} />
     </MapContainer>            
 </div>
