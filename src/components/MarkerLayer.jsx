@@ -1,4 +1,4 @@
-import {Marker, useMapEvents } from 'react-leaflet'
+import {Marker, useMapEvents} from 'react-leaflet'
 
 const MarkerLayer = (props) => {
     

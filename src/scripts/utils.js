@@ -44,4 +44,22 @@ const latLongDistance = (latlong1, latlong2) => {
     return Math.round(6371e3 * c); //The distance in meters.
 }
 
-export {latLongDistance}
+/* 
+metersToMiles - Takes meters returns distance in miles.
+Usage: 
+let miles = metersToMiles(1000);
+
+Arguments: 
+meters - A number of SI meters.
+
+*/
+const metersToMiles = (meters) => {
+
+    //Convert meters to feet:
+    let feet = meters * 3.281;
+    const miles = feet/5280;
+
+    return miles;
+}
+
+export {latLongDistance, metersToMiles};
