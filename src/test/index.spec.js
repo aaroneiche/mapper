@@ -32,11 +32,17 @@ describe("Test latLongDistance", () => {
 
 describe("Test metersToMiles", () => {
 
-  it("should throw an error, due to lack of inputs", ()=>{
+  it("should throw an error, due to lack of input", ()=>{
     expect(()=>{
       metersToMiles();
     }).toThrow();
   });
+
+  it("should throw an error, due to invalid input", ()=>{
+    expect(()=>{
+      metersToMiles("One Thousand");
+    }).toThrow();
+  })
 
   it("should return 0.62 miles", ()=>{
     expect(Number(metersToMiles(1000).toFixed(2))).toBe(0.62);

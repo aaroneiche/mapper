@@ -59,6 +59,11 @@ const metersToMiles = (meters) => {
         throw new Error("Please provide a value to convert");
     }
 
+    if(isNaN(Number(meters))) {
+        throw new Error("Input must be numeric");
+    }
+
+
     //Convert meters to feet:
     let feet = meters * 3.281;
     const miles = feet/5280;
