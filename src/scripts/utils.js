@@ -72,3 +72,28 @@ const metersToMiles = (meters) => {
 }
 
 export {latLongDistance, metersToMiles};
+
+
+/* 
+bearing - Takes two lat/long values and returns bearing.
+Usage: 
+let bearing = bearing([39.8528, -75.1638],[39.8528, -75.2638]);
+
+Arguments: 
+latlong1 - An array consisting of 2 numerical values. Latitude, then longitude.
+latlong2 - An array consisting of 2 numerical values. Latitude, then longitude. 
+
+Note: Based off code found at: https://www.movable-type.co.uk/scripts/latlong.html
+*/
+const bearing = (latlong1, latlong2) => {
+
+    const y = Math.sin(latlong2[0]-latlong1[0]) * Math.cos(latlong2[1]);
+
+    const x = Math.cos(latlong1[1]) * Math.sin(latlong2[1]) -
+              Math.sin(latlong1[1]) * Math.cos(latlong2[1]) * Math.cos(latlong2[0]-latlong1[0]);
+
+    const radAngle = Math.atan2(y, x);
+    return (radAngle * 180/Math.PI + 360) % 360;
+}
+
+export {latLongDistance, bearing}
