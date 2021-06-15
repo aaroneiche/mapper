@@ -55,6 +55,10 @@ meters - A number of SI meters.
 */
 const metersToMiles = (meters) => {
 
+    if(meters == undefined) {
+        throw new Error("Please provide a value to convert");
+    }
+
     //Convert meters to feet:
     let feet = meters * 3.281;
     const miles = feet/5280;

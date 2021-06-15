@@ -1,4 +1,5 @@
-import {latLongDistance} from '../scripts/utils';
+import {latLongDistance, metersToMiles} from '../scripts/utils';
+
 
 describe("Test latLongDistance", () => {
  
@@ -28,3 +29,17 @@ describe("Test latLongDistance", () => {
     }).toThrow();
   });
 });
+
+describe("Test metersToMiles", () => {
+
+  it("should throw an error, due to lack of inputs", ()=>{
+    expect(()=>{
+      metersToMiles();
+    }).toThrow();
+  });
+
+  it("should return 0.62 miles", ()=>{
+    expect(Number(metersToMiles(1000).toFixed(2))).toBe(0.62);
+  });
+
+})
