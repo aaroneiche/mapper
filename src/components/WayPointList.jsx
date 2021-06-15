@@ -8,9 +8,9 @@ const WayPointList = props => {
         </li>;
     })
 
-    return <ul className="waypoint-list">
+    return <ol className="waypoint-list">
         {listItems}
-    </ul>
+    </ol>
 }
 
 export default WayPointList;

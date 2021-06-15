@@ -10,9 +10,9 @@ function Map(props) {
         height: "400px",
         width: "600px"
     }
-    const attribution = "!!!!PLEASE ADD ATTRIBUTION!!!!";
+    const attribution = " © OpenStreetMap contributors";
     const tiles = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
-    const mapCenter = [39.9528, -75.1638];
+    const mapCenter = [45.498045, -122.667901];//[39.9528, -75.1638];
     const zoomLevel = 10;  
     
     return <div>  

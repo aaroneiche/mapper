@@ -7,16 +7,24 @@
   margin: 0px auto;
 }
 
+
 .wrapper {
   display: flex;
-  flex-direction: row;
   border: solid black 3px; 
+  flex-direction: row;
   flex-wrap: wrap;
   padding: 3px;
+  border-radius: 4px;
 }
 
 .stats-wrapper {
   text-align: left;
+}
+
+.instructions {
+  display: flexbox;
+  flex-direction: row;
+  
 }
 
 .waypoint-list {
@@ -26,10 +34,10 @@
 }
 
 .waypoint-item {
-  list-style-type: none;
   text-align: left;
   margin-bottom: 10px;
   border: solid black 2px;
+  border-radius: 4px;
   padding: 2px;
 }
 

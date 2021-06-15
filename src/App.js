@@ -2,7 +2,6 @@ import './App.css';
 import Map from './components/Map';
 import WayPointList from './components/WayPointList';
 import {useState} from 'react';
-import { wait } from '@testing-library/dom';
 
 function App() {
 
@@ -14,12 +13,21 @@ function App() {
   const clearPoints = () => {
     setWaypoints([]);
   }
+
+  const instructions = ()=>{
+    if(activePath) {
+      return <div>Use the left Mouse button to add points to a path. Use the right button to stop</div>
+    }else{
+      return <div>Click on the left mouse button to enter path setting mode</div>
+    }
+  }
   
   return (
     <div className="App">
       Welcome to Mapper
 
     <div className="wrapper">
+    {instructions()}
       <div>
         <Map 
           waypoints={waypoints} 
@@ -31,7 +39,11 @@ function App() {
           setCurrentLatLong={setcurrentLatLong}
           currentLatLong={currentLatLong}
         />
-        <button onClick={clearPoints}>Clear Points</button>
+        <div className="instructions">
+          <button onClick={clearPoints}>Clear Points</button>
+        </div>
+
+        
       </div>
       <div >
         <WayPointList waypoints={waypoints}/>
@@ -40,7 +52,7 @@ function App() {
       <div class="stats-wrapper">
           <div><b>Current Latitude: </b> {currentLatLong[0]}˚</div>
           <div><b>Current Longitude: </b> {currentLatLong[1]}˚</div>
-          <div><b>Total Distance: </b> {totalDistance}</div>
+          <div><b>Total Distance: </b> {totalDistance.toFixed(2)} mi</div>
         </div>
               
     </div> 

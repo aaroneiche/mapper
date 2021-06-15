@@ -1,6 +1,6 @@
 import {Marker, Tooltip} from 'react-leaflet';
 import { latLngBounds} from 'leaflet';
-import {latLongDistance} from '../scripts/utils';
+import {latLongDistance, metersToMiles} from '../scripts/utils';
 
 
 function Annotations(props) {
@@ -16,8 +16,7 @@ function Annotations(props) {
         const d = latLongDistance(props.waypoints[index], props.waypoints[index+1]);
         runningTotal += d;
 
-        // TODO: replace this with a miles calculation conversion.
-        const displayVal = (d > 1000)? `${d/1000}km` : `${d}m`;
+        const displayVal = `${metersToMiles(d).toFixed(2)} mi`;
 
         return <Marker opacity="0"  position={latLngBounds([props.waypoints[index], props.waypoints[index+1]]).getCenter()}>
             <Tooltip offset={[-20,25]} direction="false" permanent>{displayVal}</Tooltip>
@@ -25,8 +24,8 @@ function Annotations(props) {
       }  
     });
 
-    props.setTotalDistance(runningTotal);
-    const displayTotal = (runningTotal > 1000)? `${runningTotal/1000}km` : `${runningTotal}m`;
+    props.setTotalDistance(metersToMiles(runningTotal));
+    const displayTotal = `${metersToMiles(runningTotal).toFixed(2)} mi`;
 
     return <div>{renderedDistances}
         <Marker opacity="0"  position={[

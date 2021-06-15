@@ -1,7 +1,6 @@
 # Mapper - a demonstration of map waypoint making 
 
 This project is a demo take-home project to build a map way-point plotter. 
-
 # Development goals: 
 - [x] Render Leaflet map on page
 - [x] Left Click Drop Points on map
@@ -10,13 +9,15 @@ This project is a demo take-home project to build a map way-point plotter.
 - [x] Reset Map
 - [x] Custom code for distance between points;
 - [x] Unit tests for distance code
-- [ ] Render waypoint list component.
+- [x] Render waypoint list component.
 - [x] Render distances between markers
+- [x] Render total length.
+- [x] Switch lengths to miles.
 ### Nice to have:
 - [ ] Replace map tiles with a better set.
 - [ ] Replace Marker with something prettier.
-- [ ] Make obvious start of path drawing
-- [ ] Tooltip with Lat/Long
+- [ ] Make more obvious start of path drawing
+- [ ] More than one set of points
 - [ ] Store Points in Local Storage
 - [ ] Clear Local Storage for way points
 
