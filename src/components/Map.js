@@ -28,8 +28,8 @@ function Map(props) {
             activePath={props.activePath} 
             setActivePath={props.setActivePath} 
         />
-        <PathLayer waypoints={props.waypoints} activePath={props.activePath}/>
-        <Annotations waypoints={props.waypoints} />
+        <PathLayer waypoints={props.waypoints} activePath={props.activePath} currentLatLong={props.currentLatLong} setCurrentLatLong={props.setCurrentLatLong}/>
+        <Annotations waypoints={props.waypoints} setTotalDistance={props.setTotalDistance} />
     </MapContainer>            
 </div>
 }

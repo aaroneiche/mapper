@@ -18,8 +18,8 @@ const MarkerLayer = (props) => {
         }
     });
 
-    const renderedWaypoints = props.waypoints.map((coords) => {
-        return <Marker key={coords[0]} position={coords} />
+    const renderedWaypoints = props.waypoints.map((coords,index) => {
+        return <Marker key={coords[0]} position={coords} alt={index} />
       });
 
       return <div>{renderedWaypoints}</div>;
